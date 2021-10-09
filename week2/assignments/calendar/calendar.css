@@ -11,6 +11,13 @@
   grid-column: span 7;
   border: silver 1px solid;
 }
+.title {
+  text-align: center;
+  padding: 5px;
+  font-weight: 700;
+  grid-column: span 7;
+  border: silver 1px solid;
+}
 
 .calendar {
   display: grid;

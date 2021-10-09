@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>moviesArray</title>
+</head>
+<body>
+    <div id="top10Movies"></div>
+    <div id="topGross"></div>
+    <div id="movieNames"></div>
+    <script>
+        const movies = [ 
+    { name: 'Avatar', year: 2009, gross: 2847246203 },
+    { name: 'Endgame', year: 2019, gross: 2797501328 },
+    { name: 'Titanic', year: 1997, gross: 2201647264 },
+    { name: 'The Force Awakens', year: 2015, gross: 2068455677 },
+    { name: 'Infinity War', year: 2018, gross: 2048359754 },
+    { name: 'Jurassic World', year: 2015, gross: 1670516444 },
+    { name: 'The Lion King', year: 2019, gross: 1657870986 },
+    { name: 'The Avengers', year: 2012, gross: 1518815515 },
+    { name: 'Furious 7', year: 2015, gross: 1515255622 },
+    { name: 'Frozen II', year: 2019, gross: 1450026933 }
+]
+
+const movies2B = movies.filter(function(item) {
+    return item.gross >= 2000000000
+    console.log(movies2b)
+})
+    let topGross = '<ol>'
+    movies2B.forEach(function(movie){  
+    topGross += `<li>$${movie.gross.toLocaleString()}</li>` 
+    })
+      topGross += '</ol>'
+    document.querySelector('#topGross').innerHTML = topGross
+
+
+
+let top10Movies ='<ol>'
+movies.forEach(function(movie) {
+    top10Movies += `<li>${movie.name}</li>`
+
+})
+top10Movies += '</ol>'
+document.querySelector('#top10Movies').innerHTML = top10Movies
+
+
+
+
+const movieNames = '<ol>'
+    movies.map(function(movie) {
+     movieNames += `<li>${movie.name}</li>`
+}).sort()
+movieNames += '</ol>'
+    document.querySelector('#movieNames').innerHTML = movieNames
+
+console.log(movieNames)
+
+
+
+const faveMovie = '<ol>'
+    movies.find(function(movie) {
+        
+    return movie.name === 'The Lion King'
+})
+
+console.log(faveMovie)
+
+
+
+
+const oldMovies = movies.some(function(item) {
+    return item.year <= 2000
+})
+
+console.log(oldMovies)
+
+const blockBusters = movies.every(function(item) {
+    return item.gross >= 1500000000
+})
+
+console.log(blockBusters)
+
+const totalGross = movies.reduce(function(currentTotal, item) {
+            return item.gross + currentTotal
+    }, 
+0)
+    
+console.log(totalGross / movies.length)
+    </script>
+</body>
+</html>
