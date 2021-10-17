@@ -11,6 +11,8 @@ const movies = [
     { name: 'Frozen II', year: 2019, gross: 1450026933 }
 ]
 
+let obj = document.querySelector("#top10Movies")
+
 const movies2B = movies.filter(function(item) {
     return item.gross >= 2000000000
 })
@@ -51,5 +53,10 @@ const totalGross = movies.reduce(function(currentTotal, item) {
             return item.gross + currentTotal
     }, 
 0)
-    
+document.querySelector("#avgGross").innerText = `$${(totalGross / movies.length).toLocaleString()}`
+
+function updateDOM(val, concat){
+    if (concat) obj.innerHTML += val
+    else obj.innerHTML = val
+}
 console.log(totalGross / movies.length)
