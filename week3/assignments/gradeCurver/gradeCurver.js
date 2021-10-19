@@ -46,9 +46,7 @@ function convertArray(obj) {
 // empty lines, can you get the number of lines down to 8?
 
 function curveGrades() {
-    const sum = (accumulator, currentValue) => (accumulator + currentValue)
-        
-    const sumGrades = (array) => (array.reduce(sum));
+    const sumGrades = (array) => (array.reduce((accumulator, currentValue) => (accumulator + currentValue)));
 
     aryGrades = convertArray(document.querySelector('#scores'));
 
@@ -58,9 +56,7 @@ function curveGrades() {
        
     mean = sumGrades(aryGrades) / aryGrades.length
 
-    range = maxGrade - minGrade
-
-    gradeSlice = range / 5
+    gradeSlice = (maxGrade - minGrade) / 5
 
     aryGrades.forEach(applyBell)
 
