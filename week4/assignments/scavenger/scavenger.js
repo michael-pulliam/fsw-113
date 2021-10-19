@@ -1,10 +1,15 @@
 // Create an event listenter for the 'submit' button that calls the combineLists() function
-
-// Modify the combineLists() function to create arrays from each scavenger hunt element in the scavenger.html document. 
+document.querySelector("submit").addEventListener("click", combineLists)
+// Modify the combineLists() function to create arrays from each scavenger hunt element in the scavenger.html document.
+ 
 // Then use the spread operator to combine these arrays into a single array. 
+
 // Sort that array and display it in the 'AllItems' element on the scavenger.html document.
 
 function combineLists() {
+    const NodeList = document.querySelectorAll("textarea");
+    const listArray = [...NodeList]
+    console.log(listArray)
 }
 
 // The following code is a bonus addition that facilitates data entry on the scavenger.html document.

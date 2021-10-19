@@ -24,3 +24,4 @@ const westOffices = [
     { city: 'Portland', sales: 2790},
     { city: 'Seattle', sales: 2811}
 ]
+

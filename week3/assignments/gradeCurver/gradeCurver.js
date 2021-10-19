@@ -1,10 +1,15 @@
 // declare each of the variables marked with "**" in the appropriate scope and using the appropriate type
 
 // create an event listener that calls the curveGrade() function when the Curve It!! button is clicked
-document.querySelector("#submit").addEventListener("click", function() {curveGrades()} )
+document.querySelector("#submit").addEventListener("click",  curveGrades )
 
 // create an event listener that resets the scores and grades to their defaults when the Reset button is clicked
-document.querySelector("#reset").addEventListener("click", reset() )
+document.querySelector("#reset").addEventListener("click", function(){
+    document.querySelector(".gradeInput").value = "";
+    document.querySelector("#grades").innerHTML = "Curved Grades Show Here";
+} )
+
+
 
 
 function applyBell(grade, index, ary) {
@@ -60,6 +65,6 @@ function curveGrades() {
     aryGrades.forEach(applyBell)
 
     // write the value of aryGrades to the grades div in the HTML document
-    addEventListener("keyup", function() {curveGrades()})
+    document.querySelector("#grades").innerHTML = aryGrades.join(",");
     
 }

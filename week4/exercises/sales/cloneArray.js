@@ -7,17 +7,20 @@ const eastOffices = [
     { city: 'Cincinnati', sales: 2010}
 ]
 
-const allEastOffices = ['New York City', ...eastOffices]
+const allEastOffices = [ ...eastOffices];
+allEastOffices.push({ city: 'New York City', sales: 6782});
 
+console.log(eastOffices);
+console.log(allEastOffices);
 
-function addCity(type, newCity){
-    let ary = eval(type + 'Offices')
-    return [...ary, newCity]
-}
+// function addCity(type, newCity){
+//     let ary = eval(type + 'Offices')
+//     return [...ary, newCity]
+// }
 
-const newEastOffices = addCity('east', 'Columbus');
-const newWestOffices = addCity('west', 'Albuquerque');
+// const newEastOffices = addCity('east', 'Columbus');
+// const newWestOffices = addCity('west', 'Albuquerque');
 
-console.log(allOffices.sort())
-console.log(eastOffices.length + '/' + newEastOffices.length)
-console.log(westOffices.length + '/' + newWestOffices.length)
+// console.log(allOffices.sort())
+// console.log(eastOffices.length + '/' + newEastOffices.length)
+// console.log(westOffices.length + '/' + newWestOffices.length)

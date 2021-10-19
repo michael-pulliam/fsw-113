@@ -1,3 +1,6 @@
+
+document.addEventListener("click", )
+
 function chkLang(lang, ...langs) {
     let result = false
 

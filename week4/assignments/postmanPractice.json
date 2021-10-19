@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "4fea283a-8315-45fa-a815-710445a470a9",
+        "name": "test2",
+        "description": "API testing 2",
+        "price": 2,
+        "isComplete": false,
+        "user": "michaelPulliam",
+        "createdAt": "2021-10-19T03:11:49.000Z",
+        "updatedAt": "2021-10-19T03:11:49.000Z"
+    },
+    {
+        "_id": "81c2c603-e576-4ea6-a9e8-5b8418b9ce80",
+        "name": "test3",
+        "description": "API testing 3",
+        "price": 3,
+        "isComplete": true,
+        "user": "michaelPulliam",
+        "createdAt": "2021-10-17T18:36:35.000Z",
+        "updatedAt": "2021-10-19T03:15:03.000Z"
+    },
+    {
+        "_id": "8f1c9e7b-56af-4fca-b5ad-9e24fff19609",
+        "name": "test",
+        "description": "API testing",
+        "price": 5,
+        "isComplete": true,
+        "user": "michaelPulliam",
+        "createdAt": "2021-10-17T18:40:07.000Z",
+        "updatedAt": "2021-10-17T18:40:07.000Z"
+    }
+]
