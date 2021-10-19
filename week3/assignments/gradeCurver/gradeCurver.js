@@ -48,7 +48,7 @@ function convertArray(obj) {
 function curveGrades() {
     const sumGrades = (array) => (array.reduce((accumulator, currentValue) => (accumulator + currentValue)));
 
-    aryGrades = convertArray(document.querySelector('#scores'));
+    let aryGrades = convertArray(document.querySelector('#scores'));
 
     const minGrade = aryGrades.reduce((a, b) => (Math.min(a, b)));
     
