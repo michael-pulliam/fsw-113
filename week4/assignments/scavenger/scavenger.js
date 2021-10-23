@@ -15,6 +15,14 @@ function combineLists() {
      document.querySelector("#AllItems").innerHTML = listArray.join(" * ");
 }
 
+// using querSelectorAll()
+
+// let allTextAreas = document.querySelectorAll("textarea");
+// let dataArrays = []
+// allTextAreas.forEach( (textArea, index) => dataArrays[index] = textArea.value.split(","))
+// const listArray = [...dataArrays[0], ...dataArrays[1], ...dataArrays[2], ...dataArrays[3]].sort();
+// document.querySelector("#allItems").innerHTML = listArray.join(" * ");
+
 // The following code is a bonus addition that facilitates data entry on the scavenger.html document.
 // If you first click in one of the textareas, you can then click scavenger hunt items in the unordered
 // list. The value of that will be added to the appropriate textarea along with any necessary commas.
