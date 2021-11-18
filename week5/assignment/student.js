@@ -5,19 +5,24 @@
 // - a method that calculates the student's letter grade (divide the student's score by the possible scores and use the resulting decimal to determine grade)
 
 class student{
-    constructor(){
-        this.name = document.querySelector("#studentName").value
-        this.course = document.querySelector("#className").value
-        this.scores = document.querySelector("#studentScores").value.split(",")
-        this.pScores = document.querySelector("#possibleScores").value.split(",")
+    constructor(name, course, scores, pScores){
+        this.name = name;
+        this.course = course;
+        this.scores = scores;
+        this.pScores = pScores;
+    }
+    getStudentName(){
+        return this.name;
+    }
+    getStudentCourse(){
+        return this.course;
     }
     addScores(){
         myConvert(this.scores)
-        score = this.scores.reduce((perValue, currValue) => (perValue + currValue))
+        return this.scores.reduce((perValue, currValue) => (perValue + currValue))
     }
     addPossScores(){
-        myConvert(this.pScores)
-        possScores = this.pScores.reduce((perValue, currValue) => (perValue + currValue))
+        return this.pScores.reduce((perValue, currValue) => (perValue + currValue))
 
     }
     convertScores(totalScore, possiScore){
